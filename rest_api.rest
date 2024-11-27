@@ -1,0 +1,86 @@
+@host = localhost
+@port = 8000
+
+# Project related
+# Question related
+###
+POST http://{{host}}:{{port}}/question HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Newly Created Question",
+    "description": "My Description"
+}
+
+###
+GET http://{{host}}:{{port}}/questions
+
+###
+DELETE http://{{host}}:{{port}}/question HTTP/1.1
+Content-Type: application/json
+
+{
+    "question_uuid": "12c8ebc8-fb9e-4db7-9d93-2504d1add694"
+}
+
+# Answer related
+###
+POST http://{{host}}:{{port}}/answer HTTP/1.1
+Content-Type: application/json
+
+{
+    "question_uuid": "c6a1ed4e-476b-4db3-a138-18650c90ef07",
+    "content": "test question"
+}
+
+###
+GET http://{{host}}:{{port}}/answers
+Content-Type: application/json
+
+{
+    "question_uuid": "c6a1ed4e-476b-4db3-a138-18650c90ef07"
+}
+
+###
+DELETE  http://{{host}}:{{port}}/answer HTTP/1.1
+Content-Type: application/json
+
+{
+    "answer_uuid": "0e567171-051f-4cfb-a1cf-e2cfc8315416"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+# Examples
+###
+GET http://{{host}}:{{port}}
+
+###
+POST http://{{host}}:{{port}}/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "tomtom"
+}
+
+###
+curl -i -X GET http://0.0.0.0:3001
+
+###
+curl -i -X POST -H 'Content-Type: application/json' -d '{"username": "Baris"}' http://0.0.0.0:3001/users
+
+
+# curl -i -X DELETE http://rest-api.io/items/5069b47aa892630aae059584
+# curl -i -X POST -H 'Content-Type: application/json' -d '{"name": "New item", "year": "2009"}' http://rest-api.io/items
+# curl -i -X PUT -H 'Content-Type: application/json' -d '{"name": "Updated item", "year": "2010"}' http://rest-api.io/items/5069b47aa892630aae059584
+
+# https://stackoverflow.com/questions/4797534/how-to-manually-send-http-post-requests-from-firefox-or-chrome-browser

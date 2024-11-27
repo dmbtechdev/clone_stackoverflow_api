@@ -1,0 +1,15 @@
+[package]
+name = "clone_stackoverflow_api"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = "0.7.9"
+tokio = { version = "1.41.1", features = ["full"] }
+serde = { version = "1.0.215", features = ["derive"] }
+sqlx = { version = "0.8.1", features = [ "runtime-tokio-rustls" , "postgres", "time", "uuid"] }
+dotenvy = "0.15.7"
+log = "0.4.22"
+pretty_env_logger = "0.5.0"
+thiserror = "2.0.3"
+async-trait = "0.1.83"
