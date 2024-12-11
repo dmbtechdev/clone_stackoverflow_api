@@ -1,8 +1,8 @@
 ### Problem Statement
 
-We will build an API (via HTTP) for a StackOverflow-like app.
+Build an API (via HTTP) for a StackOverflow-like app.
 
-We will build two primary features in StackOverflow:
+Build two primary features in StackOverflow:
 
 Question creation, retrieval & deletion
 Answer creation, retrieval & deletion
